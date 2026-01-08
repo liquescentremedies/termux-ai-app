@@ -326,7 +326,8 @@ public class EnhancedTerminalView extends TerminalView {
      */
     public void showKeyboard() {
         if (inputMethodManager != null) {
-            inputMethodManager.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
+            requestFocus();
+            inputMethodManager.showSoftInput(this, InputMethodManager.SHOW_FORCED);
         }
     }
 
